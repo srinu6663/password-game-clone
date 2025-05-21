@@ -1,0 +1,109 @@
+/* Rule Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes success {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes error {
+    0% {
+        background-color: var(--color-error-bg);
+    }
+    50% {
+        background-color: rgba(239, 68, 68, 0.2);
+    }
+    100% {
+        background-color: var(--color-error-bg);
+    }
+}
+
+/* Apply animations to elements */
+.rule {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.rule.success {
+    animation: success 0.4s ease-out;
+}
+
+.rule.error {
+    animation: error 0.4s ease-out;
+}
+
+/* Character count animation */
+@keyframes highlight {
+    0% {
+        color: var(--color-neutral-500);
+    }
+    50% {
+        color: var(--color-primary);
+    }
+    100% {
+        color: var(--color-neutral-500);
+    }
+}
+
+.char-count.updating {
+    animation: highlight 0.4s ease-in-out;
+}
+
+/* Button hover animation */
+#restart-button {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#restart-button:hover {
+    transform: translateY(-2px);
+}
+
+#restart-button:active {
+    transform: translateY(0);
+}
+
+/* Header animation */
+h1, .subtitle {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.subtitle {
+    animation-delay: 0.2s;
+}
+
+/* Win screen animation */
+.win-screen {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Interactive elements animations */
+.emoji-item, .face-example, .roman-numeral, .example-item, .prime-number, .html-tag {
+    transition: transform 0.2s ease;
+}
+
+.emoji-item:hover, .face-example:hover, .roman-numeral:hover, 
+.example-item:hover, .prime-number:hover, .html-tag:hover {
+    transform: scale(1.1);
+}
+
+/* Rule appearance delay - more subtle */
+.rule:nth-child(2) { animation-delay: 0.1s; }
+.rule:nth-child(3) { animation-delay: 0.15s; }
+.rule:nth-child(4) { animation-delay: 0.2s; }
+.rule:nth-child(5) { animation-delay: 0.25s; }

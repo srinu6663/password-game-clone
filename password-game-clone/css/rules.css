@@ -1,0 +1,172 @@
+.rule {
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-neutral-300);
+    background-color: white;
+    transition: all var(--transition-normal);
+    overflow: hidden;
+    margin-bottom: var(--space-3);
+}
+
+.rule-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.rule-number {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.rule-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--color-neutral-200);
+    margin-left: auto;
+}
+
+.rule-status-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.rule-status-error {
+    background-color: var(--color-error);
+    color: white;
+}
+
+.rule-content {
+    font-size: var(--font-size-md);
+    color: var(--color-neutral-700);
+}
+
+.rule.success {
+    background-color: var(--color-success-bg);
+    border-color: var(--color-success);
+    order: 2;
+}
+
+.rule.error {
+    background-color: var(--color-error-bg);
+    border-color: var(--color-error);
+    order: 1;
+}
+
+.rule.pending {
+    opacity: 0.7;
+}
+
+/* Special rule visualizations */
+.rule-visual {
+    margin-top: var(--space-3);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.emoji-container {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+}
+
+.emoji-item {
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+    user-select: none;
+}
+
+.emoji-item:hover {
+    transform: scale(1.2);
+}
+
+.math-expression {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    padding: var(--space-2);
+    background-color: var(--color-neutral-100);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+}
+
+.roman-numeral-examples {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.roman-numeral {
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-neutral-100);
+    border-radius: var(--radius-sm);
+    font-family: serif;
+    font-weight: 500;
+}
+
+.fruit-examples, .animal-examples {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.example-item {
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-neutral-100);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+}
+
+.prime-numbers {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.prime-number {
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-neutral-100);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.face-examples {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+}
+
+.face-example {
+    font-size: var(--font-size-lg);
+    user-select: none;
+    cursor: pointer;
+}
+
+.html-tag-examples {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.html-tag {
+    font-family: monospace;
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-neutral-100);
+    border-radius: var(--radius-sm);
+}
+
+.rules-container {
+    display: flex;
+    flex-direction: column;
+}
