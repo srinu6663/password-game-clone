@@ -55,13 +55,15 @@ function findPalindromeNumbers(str) {
 }
 
 // Extract all Roman numerals from a string
-function extractRomanNumerals(str) {
-    const romanRegex = /\bM{0,3}(CM|CD|D?C{0,3})?(XC|XL|L?X{0,3})?(IX|IV|V?I{0,3})?\b/gi;
-    return (str.match(romanRegex) || []).filter(
-        rn => rn.length >= 2 && /^[IVXLCDM]+$/i.test(rn)
-    );
+function extractRomanNumerals(password) {
+  const matches = password.match(/[IVXLCDM]+/gi) || [];
+  return matches.filter(isValidRomanNumeral);
 }
 
+function isValidRomanNumeral(str) {
+  str = str.toUpperCase();
+  return /^(M{0,3})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/.test(str);
+}
 // Convert Roman numeral to decimal
 function romanToDecimal(roman) {
     const romanMap = {

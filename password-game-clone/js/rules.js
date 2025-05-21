@@ -47,12 +47,12 @@ const rules = [
     },
     {
         id: 7,
-        description: "Your password must include a Roman numeral (e.g., IV, X, IX).",
-        validate: (password) => {
-            const romanNumerals = extractRomanNumerals(password);
-            return romanNumerals.length > 0;
-        },
-        examples: ['IV', 'X', 'IX', 'L', 'C']
+    description: "Your password must include a Roman numeral (e.g., IV, X, IX).",
+    validate: (password) => {
+        const romans = extractRomanNumerals(password);
+        return romans.length > 0;
+    },
+    examples: ['IV', 'X', 'IX', 'L', 'C']
     },
     {
         id: 8,
